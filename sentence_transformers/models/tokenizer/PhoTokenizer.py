@@ -116,7 +116,7 @@ class PhoTokenizer(object):
         return self.vocab.bos_index
 
     def __init__(self, bpe_path: str, vncorenlp_path: str, do_lower_case: bool = False):
-        bpe_path = "/kaggle/working"
+        bpe_path = "/kaggle/working/vn_sbert_deploy/bpe"
         bpe_codes_path = os.path.join(bpe_path, BPECODE_FILE)
         vocab_file_path = os.path.join(bpe_path, VOCAB_FILE)
         
