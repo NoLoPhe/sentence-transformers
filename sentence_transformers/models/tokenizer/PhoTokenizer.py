@@ -116,6 +116,7 @@ class PhoTokenizer(object):
         return self.vocab.bos_index
 
     def __init__(self, bpe_path: str, vncorenlp_path: str, do_lower_case: bool = False):
+        bpe_path = "/kaggle/working"
         bpe_codes_path = os.path.join(bpe_path, BPECODE_FILE)
         vocab_file_path = os.path.join(bpe_path, VOCAB_FILE)
         
@@ -137,7 +138,7 @@ class PhoTokenizer(object):
 
     @staticmethod
     def load(model_path: str, **kwargs):
-        model_path = '/kaggle/working'
+        # model_path = '/kaggle/working'
         config_path = os.path.join(model_path, CONFIG_FILE)
         config = {}
         if os.path.exists(config_path):
