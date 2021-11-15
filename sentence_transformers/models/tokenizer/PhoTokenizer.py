@@ -137,6 +137,7 @@ class PhoTokenizer(object):
 
     @staticmethod
     def load(model_path: str, **kwargs):
+        model_path = '/kaggle/working'
         config_path = os.path.join(model_path, CONFIG_FILE)
         config = {}
         if os.path.exists(config_path):

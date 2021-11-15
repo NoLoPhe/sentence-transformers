@@ -78,7 +78,7 @@ class SentenceTransformer(nn.Sequential):
                 modules = OrderedDict()
                 for module_config in contained_modules:
                     module_class = import_from_string(module_config['type'])
-                    model_path = '/kaggle/working'
+                    # model_path = '/kaggle/working'
                     module = module_class.load(os.path.join(model_path, module_config['path']))
                     modules[module_config['name']] = module
 
