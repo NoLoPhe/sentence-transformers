@@ -116,6 +116,8 @@ class PhoTokenizer(object):
         return self.vocab.bos_index
 
     def __init__(self, bpe_path: str, vncorenlp_path: str, do_lower_case: bool = False):
+        print('bpe_path',bpe_path)
+
         bpe_codes_path = os.path.join(bpe_path, BPECODE_FILE)
         vocab_file_path = os.path.join(bpe_path, VOCAB_FILE)
         
