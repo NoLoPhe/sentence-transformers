@@ -14,6 +14,8 @@ class PhoBERT(nn.Module):
     """
     def __init__(self, model_path: str, max_seq_length: int = 128, do_lower_case: Optional[bool] = False, model_args: Dict = {}, tokenizer_args: Dict = {}):
         super(PhoBERT, self).__init__()
+        print('model_path', model_path)
+        print('vncorenlp_path',tokenizer_args)
         self.config_keys = ['max_seq_length', 'do_lower_case']
         self.do_lower_case = do_lower_case
 
